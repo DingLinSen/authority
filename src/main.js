@@ -9,6 +9,14 @@ Vue.config.productionTip = false
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
+// 解决element-ui侧边栏文字不消失的问题
+import Fragment from 'vue-fragment'
+Vue.use(Fragment.Plugin)
+
+
+// 引入reset.css文件
+import './style/reset.css'
+
 Vue.use(ElementUI);
 
 new Vue({
