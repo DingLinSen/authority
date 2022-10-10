@@ -24,7 +24,8 @@
   </div>
 </template>
 <script>
-import { login, code, getUser } from '../../api/user'
+import loginApi from '../../api/login'
+
 export default {
   data() {
     return {
@@ -34,9 +35,9 @@ export default {
         code: '',
       },
       rules: {
-        username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
-        password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
-        text: [{ required: true, message: '请输入验证码', trigger: 'blur' }],
+        username: [{ required: true, message: '请输入用户名', trigger: 'change' }],
+        password: [{ required: true, message: '请输入密码', trigger: 'change' }],
+        text: [{ required: true, message: '请输入验证码', trigger: 'change' }],
       },
       imgCodeUrl: '',
     }
@@ -53,22 +54,23 @@ export default {
     // 登录方法
     async handleLogin() {
       try {
-        const token = await this.$store.dispatch('login', this.ruleForm)
-        if (!token) return
+        const response = await this.$store.dispatch('User/login', this.ruleForm)
+        // console.log(response)
+        if (!response) return
         this.$message.success('登录成功')
         this.$router.push('/')
       } catch (error) {
-        console.log(error.message)
+        this.$message.error(error.message)
       }
     },
 
     // 获取验证码
     async handleCode() {
       try {
-        const response = await code()
-        this.imgCodeUrl = window.URL.createObjectURL(response.data)
-      } catch (error) {
-        console.log(error.message)
+        const response = await loginApi.code()
+        this.imgCodeUrl = window.URL.createObjectURL(response)
+      } catch (e) {
+        console.log(e.message)
       }
     },
 

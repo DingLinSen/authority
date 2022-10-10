@@ -31,7 +31,7 @@ export default {
   watch: {
     $route: {
       handler(menu) {
-        console.log(menu)
+        // console.log(menu);
         const obj = {
           title: menu.meta.title,
           name: menu.name,

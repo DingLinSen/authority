@@ -30,7 +30,6 @@ export default {
       }
     },
     setEditValue(state, val) {
-      // console.log(val);
       state.editableTabsValue = val
     },
     closeTags(state, data) {

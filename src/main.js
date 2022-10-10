@@ -9,6 +9,8 @@ Vue.config.productionTip = false
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
+import './permission'
+
 // 解决element-ui侧边栏文字不消失的问题
 import Fragment from 'vue-fragment'
 Vue.use(Fragment.Plugin)

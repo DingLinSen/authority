@@ -27,70 +27,70 @@ const routes = [
         name: 'home',
         component: () => import('../views/home'),
       },
-      {
-        path: 'departmentList',
-        name: 'departmentList',
-        component: () => import('../views/system/DepartmentList.vue'),
-        meta: {
-          title: '机构管理',
-        },
-      },
-      {
-        path: 'userList',
-        name: 'userList',
-        component: () => import('../views/system/userList.vue'),
-        meta: {
-          title: '用户管理',
-        },
-      },
-      {
-        path: 'roleList',
-        name: 'roleList',
-        component: () => import('../views/system/RoleList.vue'),
-        meta: {
-          title: '角色管理',
-        },
-      },
-      {
-        path: 'menuList',
-        name: 'menuList',
-        component: () => import('../views/system/MenuList.vue'),
-        meta: {
-          title: '权限管理',
-        },
-      },
-      {
-        path: 'goodCategory',
-        name: 'goodCategory',
-        component: () => import('../views/goods/goodCategory.vue'),
-        meta: {
-          title: '分类管理',
-        },
-      },
-      {
-        path: 'goodsBrand',
-        name: 'goodsBrand',
-        component: () => import('../views/goods/goodsBrand.vue'),
-        meta: {
-          title: '品牌管理',
-        },
-      },
-      {
-        path: 'systemCode',
-        name: 'systemCode',
-        component: () => import('../views/systenConfig/systemCode.vue'),
-        meta: {
-          title: '日志管理',
-        },
-      },
-      {
-        path: 'document',
-        name: 'document',
-        component: () => import('../views/systenConfig/document.vue'),
-        meta: {
-          title: '接口文档',
-        },
-      },
+      // {
+      //   path: '/department',
+      //   name: '/department',
+      //   component: () => import('../views/system/Department/DepartmentList.vue'),
+      //   meta: {
+      //     title: '机构管理',
+      //   },
+      // },
+      // {
+      //   path: 'userList',
+      //   name: 'userList',
+      //   component: () => import('../views/system/User/UserList.vue'),
+      //   meta: {
+      //     title: '用户管理',
+      //   },
+      // },
+      // {
+      //   path: 'roleList',
+      //   name: 'roleList',
+      //   component: () => import('../views/system/Role/RoleList.vue'),
+      //   meta: {
+      //     title: '角色管理',
+      //   },
+      // },
+      // {
+      //   path: 'menuList',
+      //   name: 'menuList',
+      //   component: () => import('../views/system/Menu/MenuList.vue'),
+      //   meta: {
+      //     title: '权限管理',
+      //   },
+      // },
+      // {
+      //   path: 'goodCategory',
+      //   name: 'goodCategory',
+      //   component: () => import('../views/goods/goodsCategory/goodsCategoryList.vue'),
+      //   meta: {
+      //     title: '分类管理',
+      //   },
+      // },
+      // {
+      //   path: 'goodsBrand',
+      //   name: 'goodsBrand',
+      //   component: () => import('../views/goods/goodsBrand.vue'),
+      //   meta: {
+      //     title: '品牌管理',
+      //   },
+      // },
+      // {
+      //   path: 'systemCode',
+      //   name: 'systemCode',
+      //   component: () => import('../views/system/config/code.vue'),
+      //   meta: {
+      //     title: '日志管理',
+      //   },
+      // },
+      // {
+      //   path: 'document',
+      //   name: 'document',
+      //   component: () => import('../views/system/config/systemDocument.vue'),
+      //   meta: {
+      //     title: '接口文档',
+      //   },
+      // },
     ],
   },
 ]
